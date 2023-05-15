@@ -2,7 +2,7 @@ resource "datadog_dashboard" "beacon" {
   title        = "beacon Service"
   description  = "A Datadog Dashboard for the ${var.application_name} deployment"
   layout_type  = "ordered"
-  is_read_only = true
+  #is_read_only = true // Deprecated
   #restricted_roles = data.datadog_roles.foo.id
 
 

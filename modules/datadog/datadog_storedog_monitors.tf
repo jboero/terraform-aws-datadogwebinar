@@ -2,7 +2,7 @@ resource "datadog_monitor" "tfer--monitor_103809464" {
   escalation_message = "Please investigate the eCommerce App, @operator"
   evaluation_delay   = "0"
   include_tags       = "true"
-  locked             = "false"
+  #locked             = "false" // Deprecated
   message            = "Kubernetes Pods are not in an optimal health state. Notify: @operator"
 
   monitor_thresholds {
@@ -11,8 +11,8 @@ resource "datadog_monitor" "tfer--monitor_103809464" {
   }
 
   name                 = "Checking ecommerce pods"
-  new_group_delay      = "0"
-  new_host_delay       = "300"
+  new_group_delay      = "300"
+  #new_host_delay       = "300"
   no_data_timeframe    = "10"
   notify_audit         = "false"
   notify_no_data       = "true"
@@ -30,7 +30,7 @@ resource "datadog_monitor" "tfer--monitor_103959101" {
   escalation_message = ""
   evaluation_delay   = "0"
   include_tags       = "true"
-  locked             = "false"
+  #locked             = "false" // Deprecated
   message            = "`discountsservice` error rate is too high."
 
   monitor_thresholds {
@@ -39,8 +39,8 @@ resource "datadog_monitor" "tfer--monitor_103959101" {
   }
 
   name                 = "Service discountsservice has a high error rate on env:development"
-  new_group_delay      = "0"
-  new_host_delay       = "300"
+  new_group_delay      = "300"
+  #new_host_delay       = "300" // Deprecated
   no_data_timeframe    = "0"
   notify_audit         = "false"
   notify_no_data       = "false"
@@ -58,7 +58,7 @@ resource "datadog_monitor" "tfer--monitor_103959103" {
   escalation_message = ""
   evaluation_delay   = "0"
   include_tags       = "true"
-  locked             = "false"
+  #locked             = "false" // Deprecated
   message            = "`discountsservice` average latency is too high."
 
   monitor_thresholds {
@@ -67,8 +67,8 @@ resource "datadog_monitor" "tfer--monitor_103959103" {
   }
 
   name                 = "Service discountsservice has a high average latency on env:development"
-  new_group_delay      = "0"
-  new_host_delay       = "300"
+  new_group_delay      = "300"
+  #new_host_delay       = "300"
   no_data_timeframe    = "0"
   notify_audit         = "false"
   notify_no_data       = "false"
@@ -86,7 +86,7 @@ resource "datadog_monitor" "tfer--monitor_103959107" {
   escalation_message = ""
   evaluation_delay   = "0"
   include_tags       = "true"
-  locked             = "false"
+  #locked             = "false"
   message            = "`store-frontend` error rate is too high."
 
   monitor_thresholds {
@@ -95,8 +95,8 @@ resource "datadog_monitor" "tfer--monitor_103959107" {
   }
 
   name                 = "Service store-frontend has a high error rate on env:development"
-  new_group_delay      = "0"
-  new_host_delay       = "300"
+  new_group_delay      = "300"
+  #new_host_delay       = "300"
   no_data_timeframe    = "0"
   notify_audit         = "false"
   notify_no_data       = "false"
@@ -114,7 +114,7 @@ resource "datadog_monitor" "tfer--monitor_103959108" {
   escalation_message = ""
   evaluation_delay   = "0"
   include_tags       = "true"
-  locked             = "false"
+  #locked             = "false"
   message            = "`store-frontend` average latency is too high\n\nFor more detail take a look to the [StoreDog 3Pillars Dashboards](https://app.datadoghq.com/dashboard/msy-hmt-yug/standard-store-dog-dashboard?from_ts=1669304352081\u0026to_ts=1669307952081\u0026live=true)\n \n \n   @jaime.alonso@datadoghq.com"
 
   monitor_thresholds {
@@ -123,8 +123,8 @@ resource "datadog_monitor" "tfer--monitor_103959108" {
   }
 
   name                 = "Service store-frontend has a high average latency on env:development"
-  new_group_delay      = "0"
-  new_host_delay       = "300"
+  new_group_delay      = "300"
+  #new_host_delay       = "300"
   no_data_timeframe    = "0"
   notify_audit         = "false"
   notify_no_data       = "false"
@@ -142,7 +142,7 @@ resource "datadog_monitor" "tfer--monitor_103959109" {
   escalation_message = ""
   evaluation_delay   = "0"
   include_tags       = "true"
-  locked             = "false"
+  #locked             = "false"
   message            = "`postgres` average latency is too high."
 
   monitor_thresholds {
@@ -151,9 +151,8 @@ resource "datadog_monitor" "tfer--monitor_103959109" {
   }
 
   name                 = "Service postgres has a high average latency on env:development"
-  new_group_delay      = "0"
-  new_host_delay       = "300"
-  no_data_timeframe    = "0"
+  new_group_delay      = "300"
+  #no_data_timeframe    = "0"
   notify_audit         = "false"
   notify_no_data       = "false"
   priority             = "0"

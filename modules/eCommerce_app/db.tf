@@ -181,8 +181,9 @@ resource "kubernetes_manifest" "service_db" {
         "service" = "db"
       }
     }
-    "status" = {
-      "loadBalancer" = {}
-    }
+    // Deprecated
+    #"status" = {
+    #  "loadBalancer" = {}
+    #}
   }
 }

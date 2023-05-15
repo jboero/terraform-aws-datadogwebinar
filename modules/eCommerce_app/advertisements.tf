@@ -139,6 +139,6 @@ resource "kubernetes_manifest" "service_advertisements" {
         "service" = "advertisements"
       }
     }
-    "status" = null
+    #"status" = null // Deprecated
   }
 }

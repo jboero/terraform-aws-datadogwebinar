@@ -10,10 +10,10 @@ terraform {
     }
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.40.0"
+      version = ">= 4.40.0"
     }
   }
-  required_version = "~> 1.3.4"
+  required_version = "> 1.3.4"
 }
 
 data "terraform_remote_state" "k8s" {

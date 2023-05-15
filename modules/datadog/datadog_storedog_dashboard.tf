@@ -1,5 +1,5 @@
 resource "datadog_dashboard" "tfer--dashboard_msy-hmt-yug" {
-  is_read_only = "false"
+  #is_read_only = "false" // Deprecated
   layout_type  = "ordered"
   reflow_type  = "fixed"
   title        = "Standard Store Dog Dashboard"
